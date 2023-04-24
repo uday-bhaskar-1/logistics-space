@@ -1,0 +1,50 @@
+@import "../../../global.scss";
+
+nav{
+    flex: 0.2;
+    border-right: 1px solid $secondary;
+    min-width: 250px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.nav_logo{
+    width: 50px;
+    height: 30px;
+    // color: $primary;
+    fill: currentColor;
+}
+
+.Menu_options{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Menu_options .material-icons{
+    padding: 20px;
+}
+
+.Menu_options h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.Menu_options:hover{
+    background-color: $secondary;
+    border-radius: 30px;
+    color: $primary;
+}
+
+.post_btn{
+    width: 100%;
+    background-color: $primary;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    height: 50px;
+}
