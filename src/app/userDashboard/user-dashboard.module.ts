@@ -5,10 +5,10 @@ import { UserDashboardRoutingModule } from './user-dashboard-routing.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FeedpostComponent } from './feedpost/feedpost.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
 import { HomeComponent } from './home/home.component';
 import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
+import { GlobalsearchComponent } from './globalsearch/globalsearch.component';
 
 
 @NgModule({
@@ -16,10 +16,10 @@ import { ProfileComponent } from './profile/profile.component';
     SidenavComponent,
     FeedpostComponent,
     DashboardComponent,
-    
     HomeComponent,
     FriendsComponent,
-    ProfileComponent
+    ProfileComponent,
+    GlobalsearchComponent
   ],
   imports: [
     CommonModule,

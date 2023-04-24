@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PrimengModule } from './primeui/primeng.module';
 import { UsercardComponent } from './components/usercard/usercard.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { UsercardComponent } from './components/usercard/usercard.component';
   ],
   imports: [
     CommonModule,
+    BrowserModule,
     PrimengModule
   ],
   exports:[ PrimengModule]

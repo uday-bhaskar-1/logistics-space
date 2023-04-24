@@ -16,10 +16,10 @@
           <p class="user-font1">{{ user.firstName }} {{ user.lastName }}</p>
           <p class="user-font2">{{ user.userName }}</p>
         </div>
-
+        <!-- [ngClass]="user.friend == true ? 'unfollowButton' : ''" -->
         <div
           class="col-3 button"
-          [ngClass]="user.friend == true ? 'unfollowButton' : ''"
+          
           style="text-align: center"
         >
           <button

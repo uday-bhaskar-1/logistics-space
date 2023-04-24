@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 // import { LoginComponent } from './login/login.component';
 
 
@@ -11,6 +12,7 @@ import { AuthRoutingModule } from './auth-routing.module';
   ],
   imports: [
     CommonModule,
+    BrowserModule,
     AuthRoutingModule
   ]
 })
