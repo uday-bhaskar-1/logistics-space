@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GlobalsearchComponent } from './globalsearch/globalsearch.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +19,8 @@ import { GlobalsearchComponent } from './globalsearch/globalsearch.component';
     HomeComponent,
     FriendsComponent,
     ProfileComponent,
-    GlobalsearchComponent
+    GlobalsearchComponent,
   ],
-  imports: [
-    CommonModule,
-    UserDashboardRoutingModule
-  ]
+  imports: [CommonModule, UserDashboardRoutingModule, SharedModule],
 })
-export class UserDashboardModule { }
+export class UserDashboardModule {}

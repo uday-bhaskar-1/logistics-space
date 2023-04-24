@@ -5,16 +5,9 @@ import { PrimengModule } from './primeui/primeng.module';
 import { UsercardComponent } from './components/usercard/usercard.component';
 import { BrowserModule } from '@angular/platform-browser';
 
-
 @NgModule({
-  declarations: [
-    UsercardComponent
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    PrimengModule
-  ],
-  exports:[ PrimengModule]
+  declarations: [UsercardComponent],
+  imports: [CommonModule, BrowserModule, PrimengModule],
+  exports: [UsercardComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
