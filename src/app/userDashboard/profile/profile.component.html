@@ -1,1 +1,24 @@
-<p>profile works!</p>
+<div>
+  <div>
+    <div style="height: 300px; overflow: hidden">
+      <img height="100%" width="100%" src="{{ userData.profilePic }}" />
+    </div>
+    <div class="flex">
+      <div class="col-4"></div>
+      <div class="col-8 flex">
+        <div class="col-3">
+          <span>{{ userData.posts }}</span> <br />
+          <span>posts</span>
+        </div>
+        <div class="col-3">
+          <span>{{ userData.followers }}</span> <br />
+          <span>Followers</span>
+        </div>
+        <div class="col-3">
+          <span>{{ userData.following }}</span> <br />
+          <span>Following</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
