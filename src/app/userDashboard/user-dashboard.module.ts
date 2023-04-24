@@ -19,7 +19,7 @@ import { ProfileComponent } from './profile/profile.component';
     
     HomeComponent,
     FriendsComponent,
-    ProfileComponent
+  
   ],
   imports: [
     CommonModule,
