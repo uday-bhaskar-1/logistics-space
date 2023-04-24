@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   constructor(private router:Router){}
-route(){
-this.router.navigate(['/dashboard'])
+
+
+  route(){
+     this.router.navigate(['/dashboard'])
 }
 }

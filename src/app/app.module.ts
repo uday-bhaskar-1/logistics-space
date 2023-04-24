@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +19,7 @@ import { UserDashboardModule } from './userDashboard/user-dashboard.module';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    CommonModule,
+    
     UserDashboardModule
   ],
   providers: [],
