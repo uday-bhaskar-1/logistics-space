@@ -18,9 +18,9 @@ import { UserDashboardModule } from './userDashboard/user-dashboard.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule,
+  
     
-    UserDashboardModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
