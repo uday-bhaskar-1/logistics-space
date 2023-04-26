@@ -1,0 +1,174 @@
+@import '../../../global.scss';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.profileContainer{
+    width: 100%;
+    height: 100%;
+}
+.coverPhotoPart{
+    width: 100%;
+    height: 13rem;
+    position: relative;
+    z-index: 10;
+}
+.coverPhotoPart img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+.postsAndFolowersPart{
+    // width: 100%;
+    height: 4.5rem;
+     position: relative;
+    z-index: 10;
+}
+.postsSubContainer{
+    width: 100%;
+    height:4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.userInfoPart{
+    width: 100%;
+    height: 28.5rem;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+  
+}
+.InfoPart{
+    height: 25rem;
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+}
+
+.InfoPart .appLogoInfo .mainLogo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+.locationPart,.joinedDatePart,.blogPart{
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.locationPart i,.joinedDatePart i,.blogPart i{
+    font-size: 1.3rem;
+         color: #7b7a7a;
+
+    
+}
+.locationPart h2,.joinedDatePart h2,.blogPart h2{
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #2b2a2a;
+
+}
+
+.InfoPart .appLogoInfo h3{
+    font-family: $fontFamily;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 25.2px;
+     color: #7b7a7a;
+}
+.InfoPart .appLogoInfo .mainLogo h2{
+    font-family: $fontFamily;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 25.2px;
+     color: #222222;
+    text-align: center;
+}
+
+
+.InfoPart .appLogoInfo .mainLogo i{
+   font-size: 1.3rem;
+   color: green;
+}
+
+
+
+
+.postsPart{
+    height: 25rem;
+    margin: 5px 8px;
+    border: 2px solid #7b7a7a;
+     border-radius: 6px;
+     padding: 20px;
+    
+}
+.postsPart h3{
+     font-family: $fontFamily;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 25.2px;
+     color: #222222;
+     text-decoration: underline blue;
+}
+
+.folowingPart{
+    width: 7rem;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+.folowingPart:hover{
+      border-bottom: 3px solid blue;
+      h5{
+            color: #222222;
+      }
+  
+}
+.folowingPart h4{
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.2px;
+    color:#5e5d5d;
+    text-align: center;
+
+}
+.folowingPart h5{
+    font-family: $fontFamily;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.2px;
+    color: #1e059b;
+    text-align: center;
+
+}
+.profilePicPart{
+
+    border: 1px solid rgb(163, 154, 154);
+    width: 15rem;
+    height: 14rem;
+    background-color: white;
+    border-radius: 5%;
+    position: absolute;
+    top:100px;
+    left: 34px;
+    z-index: 100;
+   padding: 5px;
+
+}
+.profilePicPart img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 5%;
+
+
+}
+

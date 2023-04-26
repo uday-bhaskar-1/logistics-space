@@ -7,12 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
   userData: any;
-  constructor() {}
+  constructor() { }
+
+
   ngOnInit(): void {
     this.userData = {
       profilePic:
         'https://images.template.net/wp-content/uploads/2016/04/27043339/Nature-Wallpaper1.jpg',
-      coverPic: null,
+      coverPic: 'assets/images/coverPic2.jpg',
       firstName: 'dummy',
       lastName: 'user',
       userName: 'DUMMY001',
@@ -24,6 +26,8 @@ export class ProfileComponent {
       createdby: 'jan 15th 2001',
       bio: 'he is dummy user',
       link: 'ownbloglink.com',
+      location: 'Visakhapatnam, India'
     };
   }
+
 }
