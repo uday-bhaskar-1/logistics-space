@@ -1,8 +1,8 @@
 <div class="usersComponent">
   <div *ngFor="let user of allUsersData">
     <div class="card">
-      <div class="profile-username" style="padding-left: 15px">
-        <div class="col-1 profile-div">
+      <div class="profile-username">
+        <div class="col-2 profile-div">
           <img
             class="profile-image"
             [src]="
@@ -12,21 +12,20 @@
             "
           />
         </div>
-        <div class="col-8 profile-name">
+        <div class="col-7 profile-name">
           <p class="user-font1">{{ user.firstName }} {{ user.lastName }}</p>
           <p class="user-font2">{{ user.userName }}</p>
         </div>
         <!-- [ngClass]="user.friend == true ? 'unfollowButton' : ''" -->
         <div
           class="col-3 button"
-          
-          style="text-align: center"
+          style="text-align: center; display: flex; align-items: center"
         >
           <button
             pButton
             type="button"
             (click)="addFriend(user.id)"
-            style="font-size: 1.3rem"
+            style="font-size: 1rem"
           >
             <span *ngIf="user.friend == true">Unfollow</span>
             <span *ngIf="user.friend == false">Follow</span>
