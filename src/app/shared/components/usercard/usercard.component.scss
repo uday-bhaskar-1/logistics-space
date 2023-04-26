@@ -1,109 +1,107 @@
 .usersComponent {
+  .user-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 30rem;
+    background-color: gray;
+  }
 
-    .user-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // width: 30rem;
-        background-color: gray;
-    }
+  .profile-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  @media screen and (max-width: 500px) {
     .profile-name {
-        padding-left: 30px;
+      padding-right: 40px;
     }
+  }
 
-    @media screen and (max-width: 500px) {
-        .profile-name {
-            padding-right: 40px;
-        }
-    }
+  .profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
 
-    .profile-image {
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-        margin-top: 22px;
-    }
+  .user-font1 {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: "Poppins", sans-serif;
+  }
 
-    .user-font1 {
-        font-size: 1.6em;
-        font-weight: 700;
-        margin-top: 20px;
-        font-family: "Poppins", sans-serif;
-    }
+  .user-font2 {
+    font-size: 1.3em;
+    margin-top: 0px;
+    font-family: "Poppins", sans-serif;
+    color: #8b8888;
+  }
 
-    .user-font2 {
-        font-size: 1.3em;
-        margin-top: -18px;
-        font-family: "Poppins", sans-serif;
-        color: #8b8888;
-    }
+  .profile-username {
+    display: flex;
+    justify-content: center;
+  }
 
-    .profile-username {
-        display: flex;
-        justify-content: center;
-    }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 13px;
+    max-width: 100%;
+    margin: 20px 40px;
+    // margin-top: 20px;
+  }
 
-    .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        padding: 16px;
-        background-color: #f2f2f2;
-        color: #333;
-        font-size: 16px;
-        max-width: 100%;
-        margin: 20px;
-    }
-
+  @media screen and (max-width: 600px) {
     .button {
-        margin-top: 25px;
+      margin-left: 5px;
+    }
+  }
+
+  ::ng-deep {
+    .p-button {
+      color: #ffffff;
+      background: #3b82f6;
+      border: 1px solid #3b82f6;
+      font-weight: 700;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        box-shadow 0.2s;
+      border-radius: 6px;
+      display: block;
+      width: 115px !important;
     }
 
-    @media screen and (max-width: 600px) {
-        .button {
-            margin-left: 5px;
-        }
+    .p-button:enabled:hover {
+      background: #3b82f6;
     }
 
+    .p-button:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .unfollowButton {
     ::ng-deep {
-        .p-button {
-            color: #ffffff;
-            background: #3b82f6;
-            border: 1px solid #3b82f6;
-            font-weight: 700;
-            transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-                box-shadow 0.2s;
-            border-radius: 6px;
-            display: block;
-            width: 137px !important;
-        }
+      .p-button {
+        color: #3b82f6;
+        background: #ffffff;
+        border: 1px solid #3b82f6;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+          box-shadow 0.2s;
+        border-radius: 6px;
+        font-weight: 700;
+        display: block;
+        width: 137px !important;
+      }
 
-        .p-button:enabled:hover {
-            background: #3b82f6;
-        }
-
-        .p-button:focus {
-            box-shadow: none !important;
-        }
+      .p-button:enabled:hover {
+        background: #ffffff;
+      }
     }
-
-    .unfollowButton {
-        ::ng-deep {
-            .p-button {
-                color: #3b82f6;
-                background: #ffffff;
-                border: 1px solid #3b82f6;
-                transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-                    box-shadow 0.2s;
-                border-radius: 6px;
-                font-weight: 700;
-                display: block;
-                width: 137px !important;
-            }
-
-            .p-button:enabled:hover {
-                background: #ffffff;
-            }
-        }
-    }
+  }
 }
