@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedpostComponent } from './feedpost/feedpost.component';
 import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
       { path: 'home', component: FeedpostComponent },
       { path: 'friends', component: FriendsComponent },
       { path: 'profile', component: ProfileComponent },
-      
+      {path: 'settings',component:SettingsComponent}
     ],
   },
 ];

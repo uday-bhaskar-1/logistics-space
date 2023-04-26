@@ -10,6 +10,7 @@ import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GlobalsearchComponent } from './globalsearch/globalsearch.component';
 import { SharedModule } from '../shared/shared.module';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { SharedModule } from '../shared/shared.module';
     FriendsComponent,
     ProfileComponent,
     GlobalsearchComponent,
+    SettingsComponent,
   ],
   imports: [CommonModule, UserDashboardRoutingModule, SharedModule],
 })
