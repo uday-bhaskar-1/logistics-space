@@ -1,3 +1,4 @@
+@import '../../../../global.scss';
 .usersComponent {
   .user-card {
     display: flex;
@@ -30,13 +31,13 @@
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 0px;
-    font-family: "Poppins", sans-serif;
+    font-family: $fontFamily;
   }
 
   .user-font2 {
     font-size: 1.3em;
     margin-top: 0px;
-    font-family: "Poppins", sans-serif;
+    font-family:$fontFamily;
     color: #8b8888;
   }
 
