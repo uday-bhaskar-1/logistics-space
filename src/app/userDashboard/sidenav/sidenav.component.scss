@@ -20,6 +20,9 @@ nav{
     align-items: center;
     cursor: pointer;
     padding-left: 10px;
+    // justify-content: center;
+    // align-items: center;
+    padding-left: 40px;
 }
 
 // .Menu_options .material-icons{
@@ -51,4 +54,13 @@ nav{
 .routingLinks{
     display: flex;
     align-items: center;
+}
+
+.prime-icons{
+    padding-right:15px ;
+}
+
+.activeLink{
+    background-color: $secondary;
+    
 }
