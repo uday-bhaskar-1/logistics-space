@@ -32,6 +32,7 @@ export class ProfileComponent {
       createdby: 'jan 15th 2001',
       bio: 'he is dummy user',
       link: 'ownbloglink.com',
+      location: 'Visakhapatnam, India',
     };
     this.postsData = [
       {
