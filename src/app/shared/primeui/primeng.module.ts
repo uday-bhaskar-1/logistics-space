@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ButtonModule} from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { StyleClassModule } from 'primeng/styleclass';
 import { RippleModule } from 'primeng/ripple';
-import { InputTextModule} from 'primeng/inputtext';
-import { DialogModule} from 'primeng/dialog';
-import { TableModule} from 'primeng/table';
-import { ConfirmPopupModule} from 'primeng/confirmpopup';
-import { ToastModule} from 'primeng/toast';
-import { MenuModule} from 'primeng/menu';
-import { MenubarModule} from 'primeng/menubar';
-import { DropdownModule} from 'primeng/dropdown';
-import { OverlayPanelModule} from 'primeng/overlaypanel';
+import { InputTextModule } from 'primeng/inputtext';
+import { DialogModule } from 'primeng/dialog';
+import { TableModule } from 'primeng/table';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { ToastModule } from 'primeng/toast';
+import { MenuModule } from 'primeng/menu';
+import { MenubarModule } from 'primeng/menubar';
+import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
-import { TimelineModule} from 'primeng/timeline';
-import { CardModule} from 'primeng/card';
-import { TooltipModule} from 'primeng/tooltip';
-import { FileUploadModule} from 'primeng/fileupload'
-import { GalleriaModule} from 'primeng/galleria';
-import { InputTextareaModule} from 'primeng/inputtextarea'
-import { InputNumberModule} from 'primeng/inputnumber' ;
-
+import { TimelineModule } from 'primeng/timeline';
+import { CardModule } from 'primeng/card';
+import { TooltipModule } from 'primeng/tooltip';
+import { FileUploadModule } from 'primeng/fileupload';
+import { GalleriaModule } from 'primeng/galleria';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @NgModule({
   declarations: [],
@@ -45,9 +44,11 @@ import { InputNumberModule} from 'primeng/inputnumber' ;
     FileUploadModule,
     GalleriaModule,
     InputTextareaModule,
-    InputNumberModule
+    InputNumberModule,
   ],
-  exports:[ ButtonModule,
+  exports: [
+    CommonModule,
+    ButtonModule,
     TooltipModule,
     StyleClassModule,
     RippleModule,
@@ -66,6 +67,7 @@ import { InputNumberModule} from 'primeng/inputnumber' ;
     FileUploadModule,
     GalleriaModule,
     InputTextareaModule,
-    InputNumberModule]
+    InputNumberModule,
+  ],
 })
-export class PrimengModule { }
+export class PrimengModule {}

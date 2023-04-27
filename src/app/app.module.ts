@@ -1,28 +1,13 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { AuthModule } from './authentication/auth.module';
-import { UserDashboardModule } from './userDashboard/user-dashboard.module';
 
-
-
+// import { TimePipe } from './shared/pipes/time.pipe';
 @NgModule({
-  declarations: [
-    AppComponent,
-   
-   
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AuthModule,
-    
-    UserDashboardModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { } 
+export class AppModule {}

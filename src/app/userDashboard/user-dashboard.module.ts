@@ -11,8 +11,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { GlobalsearchComponent } from './globalsearch/globalsearch.component';
 import { SharedModule } from '../shared/shared.module';
 import { SettingsComponent } from './settings/settings.component';
-
-
+import { TimePipe } from '../shared/pipes/time.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
 @NgModule({
   declarations: [
     SidenavComponent,
@@ -23,7 +24,15 @@ import { SettingsComponent } from './settings/settings.component';
     ProfileComponent,
     GlobalsearchComponent,
     SettingsComponent,
+    TimePipe,
   ],
-  imports: [CommonModule, UserDashboardRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    UserDashboardRoutingModule,
+    SharedModule,
+    InputTextModule,
+  ],
 })
 export class UserDashboardModule {}

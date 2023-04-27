@@ -1,0 +1,173 @@
+.profileComponent {
+    .p-inputtext {
+            font-size: 10px;
+            color: black;
+            width: 84%;
+            font-family: cursive;
+            border: 1px solid #656565;
+        }
+    .card {
+        // box-shadow: 0 4px 8px 0#3f78b9;
+        border-radius: 5px;
+        padding: 15px;
+        // background-color: #f2f2f2;
+        color: #333;
+        font-size: 16px;
+        max-width: 100%;
+        margin: 10px;
+            border: 0.6px solid #d6cdcd;
+    }
+
+    .profile-img {
+        width: 46px;
+        height: 46px;
+        border-radius: 40px;
+    }
+
+    .name {
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .name span {
+        font-size: 25px;
+        font-weight: 100;
+    }
+
+    .time {
+        margin-top: 0px;
+        font-size: 13px;
+        font-weight: 100;
+        font-family: "Poppins", sans-serif;
+        color: #747373;
+    }
+
+    .caption {
+        font-size: 25px;
+        font-family: "Poppins", sans-serif;
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    div span {
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .profile-view {
+        border-radius: 40px;
+        height: 35px;
+        border: none;
+        background-color: white;
+    }
+
+    .likeIcon {
+        color:red;
+        // background-color: red;
+    }
+
+    .postHeading {
+        margin: 20px;
+        margin-bottom: 30px;
+        border: 3px solid rgb(86, 82, 82);
+        border-width: 0px 0px 3px 0px;
+        width: fit-content;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    .deletePost {
+        color: red;
+        font-size: 18px;
+        font-family: "Poppins";
+    }
+
+    ::ng-deep {
+        .p-overlaypanel .p-overlaypanel-content {
+            padding: 15px;
+        }
+
+        .p-overlaypanel {
+            margin-top: 0px !important;
+        }
+    }
+
+    ::ng-deep {
+        .pi {
+            font-size: 18px;
+        }
+
+        .p-inputtext {
+            font-size: 18px;
+            color: black;
+            width: 90%;
+            font-family: cursive;
+            border: 1px solid #656565;
+        }
+
+        .p-inputtext:enabled:hover {
+            border-color: #656565;
+        }
+
+        .p-inputtext:enabled:focus {
+            outline: 0 none;
+            outline-offset: 0;
+            box-shadow: none !important;
+            border-color: #656565;
+        }
+
+        .p-inputtext.ng-dirty.ng-invalid {
+            border-color: #656565;
+        }
+    }
+
+    .commentName {
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        margin: 0px;
+        color: #747373;
+    }
+
+    .comment {
+        font-size: 22px;
+        font-weight: 100;
+        font-family: "Poppins", sans-serif;
+        margin: 0px;
+    }
+
+    .commentTime {
+        font-size: 14px !important;
+        font-weight: 200 !important;
+        margin-left: 4px !important;
+    }
+
+}
+
+::ng-deep {
+    .profilePictureOverlay {
+        top: 165px !important;
+        margin-left: -55px;
+        z-index: 1 !important;
+    }
+
+    .p-overlaypanel:before {
+        display: none;
+    }
+
+    .p-overlaypanel:after {
+        display: none;
+    }
+}
+
+.nullProfilePicture {
+    opacity: 0.5;
+    cursor: context-menu !important;
+}
