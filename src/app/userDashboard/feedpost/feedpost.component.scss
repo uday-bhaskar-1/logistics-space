@@ -28,7 +28,7 @@ main{
     background-color: white;
     z-index: 10;
     border: 1px solid $secondary;
-    padding: 15px 20px;
+    padding: 0px 20px;
 
 }
 
@@ -151,11 +151,7 @@ main::-webkit-scrollbar{
 }
 
 section{
-    display: flex;
-    height: 100vh;
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
+
     padding: 0 10px;
 }
 
@@ -163,3 +159,66 @@ section{
 
 
 
+
+
+.headerIcons {
+    color: white;
+    padding: 10px;
+}
+
+.iconStyle {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+::ng-deep {
+    .modelTextArea .p-inputtext {
+        height: -moz-fit-content !important;
+        height: fit-content !important;
+        padding-left: 1.5rem;
+        width: 100%;
+        padding: 0.5rem 0.5rem;
+        // font-family: cursive;
+        font-size: 17px;
+        border: none;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+            box-shadow 0.2s;
+        appearance: none;
+        border-radius: 3px;
+        background: #ffffff;
+        color: black;
+        overflow-y:scroll ;
+    }
+
+    .p-inputtext:enabled:hover {
+        border-color: transparent;
+    }
+
+    .p-inputtext:enabled:focus {
+        box-shadow: none;
+        border-color: transparent;
+    }
+         .postButton {
+             .p-button {
+                min-width: 90px;
+                    height: 36px;
+                    letter-spacing: 2px;
+                    padding-top: 5px;
+                    color: rgb(254, 254, 254);
+                    border: none;
+                    font-size: 20px;
+                    border-radius: 4px;
+                }
+             }
+    
+             .p-button:enabled:hover {
+                 color: #ffffff;
+                 border-color: none;
+             }
+    
+             .p-button:focus {
+                 box-shadow: none !important;
+             }
+         }

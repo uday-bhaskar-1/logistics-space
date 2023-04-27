@@ -1,4 +1,8 @@
 .profileComponent {
+    .userNameSpan{
+        font-weight: bold;
+            font-size: 18px;
+    }
     .p-inputtext {
             font-size: 10px;
             color: black;
@@ -44,6 +48,10 @@
         font-family: "Poppins", sans-serif;
         color: #747373;
     }
+    span{
+        font-weight: bold;
+        font-size: 18px;
+    }
 
     .caption {
         font-size: 25px;
@@ -53,12 +61,12 @@
         margin-bottom: 15px;
     }
 
-    div span {
-        font-size: 17px;
-        font-weight: bold;
-        margin-left: 5px;
-    }
-
+  
+.routerComponent{
+font-size: 22px;
+    font-weight: bold;
+    margin-left: 5px;
+}
     .profile-view {
         border-radius: 40px;
         height: 35px;
@@ -170,4 +178,10 @@
 .nullProfilePicture {
     opacity: 0.5;
     cursor: context-menu !important;
+}
+
+.postImage{
+    width: 500px;
+    border-radius: 3px;
+    margin-bottom: 20px;
 }

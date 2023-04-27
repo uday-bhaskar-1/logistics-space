@@ -30,14 +30,15 @@ export class ProfileComponent {
       userName: 'DUMMY001',
       id: 2,
       createdby: 'jan 15th 2001',
-      bio: 'he is dummy user',
+      bio: 'he is a dummy user',
       link: 'ownbloglink.com',
       location: 'Visakhapatnam, India',
     };
     this.postsData = [
       {
         commentCount: 3,
-        imageUrl: null,
+        imageUrl:
+          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcGFueSUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80',
         like: true,
         likeCount: 1,
         likedTime: '2023-04-26T10:00:25.898857',

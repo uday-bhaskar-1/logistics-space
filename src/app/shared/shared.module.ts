@@ -8,6 +8,6 @@ import { UsercardComponent } from './components/usercard/usercard.component';
 @NgModule({
   declarations: [UsercardComponent],
   imports: [CommonModule, PrimengModule],
-  exports: [UsercardComponent],
+  exports: [UsercardComponent, PrimengModule],
 })
 export class SharedModule {}

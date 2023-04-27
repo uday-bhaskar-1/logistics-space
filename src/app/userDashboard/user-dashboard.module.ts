@@ -13,7 +13,6 @@ import { SharedModule } from '../shared/shared.module';
 import { SettingsComponent } from './settings/settings.component';
 import { TimePipe } from '../shared/pipes/time.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InputTextModule } from 'primeng/inputtext';
 @NgModule({
   declarations: [
     SidenavComponent,
@@ -32,7 +31,6 @@ import { InputTextModule } from 'primeng/inputtext';
     ReactiveFormsModule,
     UserDashboardRoutingModule,
     SharedModule,
-    InputTextModule,
   ],
 })
 export class UserDashboardModule {}

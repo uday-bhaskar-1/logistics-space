@@ -1,4 +1,3 @@
-<br />
 <div class="profileComponent">
   <div>
     <div
@@ -17,6 +16,8 @@
               : '../../../assets/default.png'
           "
         />
+        <br />
+        <!-- <br /> -->
 
         <!-- <div class="profileOverlay">
           <p-overlayPanel
@@ -76,10 +77,7 @@
             </ng-template>
           </p-overlayPanel>
         </div> -->
-        <span>
-          {{ userData.firstName | titlecase }}
-          {{ userData.lastName | titlecase }}</span
-        >
+        <span class="userNameSpan mt-3"> {{ userData.userName }}</span>
         <!-- <br /> -->
         <!-- <p
           style="
@@ -117,7 +115,7 @@
     </div>
     <div
       class="flex col-12"
-      style="padding: 0px 20px 0px 40px; text-align: center"
+      style="padding: 0px 20px 0px 20px; text-align: center"
     >
       <!-- <div class="col-3">
         <span>
@@ -126,24 +124,24 @@
         >
       </div> -->
       <div
-        class="col-12"
-        style="
-          display: flex;
-          justify-content: space-evenly;
-          align-items: end;
-          text-align: center;
-          padding-top: 0px;
-        "
+        class="col-12 pt-3"
+        style="display: flex; justify-content: space-evenly; text-align: center"
       >
         <div class="col-3">
-          <span>{{ userData.postCOUNT }} posts</span>
+          <span class="routerComponent">{{ userData.postCOUNT }} posts</span>
         </div>
         <div class="col-3">
-          <span>{{ userData.followerCount }} Followers</span> <br />
+          <span class="routerComponent"
+            >{{ userData.followerCount }} Followers</span
+          >
+          <br />
           <!-- <span></span> -->
         </div>
         <div class="col-3">
-          <span>{{ userData.followingCount }} Following</span> <br />
+          <span class="routerComponent"
+            >{{ userData.followingCount }} Following</span
+          >
+          <br />
           <!-- <span></span> -->
         </div>
       </div>
@@ -198,8 +196,20 @@
           </div>
         </div>
 
-        <div>
-          <p style="white-space: pre-wrap" class="caption">{{ item.post }}</p>
+        <div *ngIf="!item.imageUrl">
+          <p style="white-space: pre-wrap; margin-top: 0px" class="caption">
+            {{ item.post }}
+          </p>
+        </div>
+        <div *ngIf="item.imageUrl">
+          <p style="white-space: pre-wrap" class="imageCaption">
+            {{ item.post }}
+          </p>
+          <div style="display: flex; justify-content: center; flex-wrap: wrap">
+            <!-- <span *ngFor="let image of item.imageUrl"> -->
+            <img class="postImage" [src]="item.imageUrl" />
+            <!-- </span> -->
+          </div>
         </div>
 
         <div class="like-comment flex justify-content-between">

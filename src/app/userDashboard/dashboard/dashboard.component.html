@@ -3,12 +3,16 @@
     class="col-3"
     style="overflow: hidden; display: flex; justify-content: center"
   >
-    <app-sidenav></app-sidenav>
+    <div style="position: fixed">
+      <app-sidenav></app-sidenav>
+    </div>
   </div>
   <div class="col-6" style="overflow: hidden">
     <router-outlet></router-outlet>
   </div>
   <div class="col-3" style="overflow: hidden">
-    <app-globalsearch></app-globalsearch>
+    <div style="position: fixed">
+      <app-globalsearch></app-globalsearch>
+    </div>
   </div>
 </div>
