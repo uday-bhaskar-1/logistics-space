@@ -58,10 +58,16 @@ nav{
 }
 
 .prime-icons{
-    padding-right:15px ;
+    padding-right:15px;
 }
 
 .activeLink{
-    background-color: $secondary;
-    
+    // background-color: $secondary;
+    color: $primary;
 }
+
+@media screen and (max-width: 500px) {
+     nav{
+       display: none;
+    }
+  }

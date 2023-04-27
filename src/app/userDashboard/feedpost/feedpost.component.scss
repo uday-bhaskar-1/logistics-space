@@ -15,6 +15,7 @@
 main{
     flex: 0.5; 
     border-right: 1px solid $secondary;
+    border-left: 1px solid $secondary;
     min-width: fit-content;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -151,7 +152,6 @@ main::-webkit-scrollbar{
 }
 
 section{
-
     padding: 0 10px;
 }
 
