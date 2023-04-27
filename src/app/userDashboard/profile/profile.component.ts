@@ -1,33 +1,85 @@
 import { Component } from '@angular/core';
-
+import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent {
+  postsData: any[] = [];
   userData: any;
-  constructor() { }
-
-
+  commentData: any[] = [];
+  commentId: any;
+  commentGroup: FormGroup;
+  displayComments: boolean = false;
+  constructor(private fb: FormBuilder) {
+    this.commentGroup = this.fb.group({
+      comment: [''],
+    });
+  }
   ngOnInit(): void {
     this.userData = {
+      email: 'sanjay@yopmail.com',
+      followerCount: 0,
+      followingCount: 0,
+      postCOUNT: 2,
       profilePic:
-        'https://images.template.net/wp-content/uploads/2016/04/27043339/Nature-Wallpaper1.jpg',
-      coverPic: 'assets/images/coverPic2.jpg',
+        'https://storage.googleapis.com/download/storage/v1/b/phoenix-social/o/photos%2Fpexels-aleksandar-pasaric-2341830.jpg?generation=1682484241626079&alt=media',
       firstName: 'dummy',
       lastName: 'user',
       userName: 'DUMMY001',
-      friend: true,
-      following: 20,
-      followers: 10,
-      posts: 2,
       id: 2,
       createdby: 'jan 15th 2001',
       bio: 'he is dummy user',
       link: 'ownbloglink.com',
-      location: 'Visakhapatnam, India'
+      location: 'Visakhapatnam, India',
     };
+    this.postsData = [
+      {
+        commentCount: 3,
+        imageUrl: null,
+        like: true,
+        likeCount: 1,
+        likedTime: '2023-04-26T10:00:25.898857',
+        post: 'this is post',
+        postId: 6,
+        time: '2023-04-26T09:58:09.160662',
+      },
+      {
+        commentCount: 3,
+        imageUrl: null,
+        like: true,
+        likeCount: 1,
+        likedTime: '2023-04-26T10:00:25.898857',
+        post: 'this is post 2',
+        postId: 6,
+        time: '2023-04-26T09:58:09.160662',
+      },
+    ];
   }
-
+  profilePictureUpload($event) {}
+  removeProfilePicture() {}
+  deletePost(postId) {}
+  likePost(postId) {}
+  getComments(postId) {
+    this.commentData = [
+      {
+        firstName: 'sanjay',
+        id: 5,
+        lastName: '111',
+        profilePic:
+          'https://storage.googleapis.com/download/storage/v1/b/phoenix-social/o/photos%2Fpexels-aleksandar-pasaric-2341830.jpg?generation=1682484241626079&alt=media',
+        userName: 'sanjay',
+      },
+      {
+        firstName: 'sanjay',
+        id: 5,
+        lastName: '111',
+        profilePic:
+          'https://storage.googleapis.com/download/storage/v1/b/phoenix-social/o/photos%2Fpexels-aleksandar-pasaric-2341830.jpg?generation=1682484241626079&alt=media',
+        userName: 'sanjay',
+      },
+    ];
+  }
+  userPostComment(postId) {}
 }

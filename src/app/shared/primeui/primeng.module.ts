@@ -47,9 +47,11 @@ import { ButtonModule } from 'primeng/button';
     FileUploadModule,
     GalleriaModule,
     InputTextareaModule,
-    InputNumberModule
+    InputNumberModule,
   ],
-  exports:[ ButtonModule,
+  exports: [
+    CommonModule,
+    ButtonModule,
     TooltipModule,
     StyleClassModule,
     RippleModule,
@@ -68,6 +70,7 @@ import { ButtonModule } from 'primeng/button';
     FileUploadModule,
     GalleriaModule,
     InputTextareaModule,
-    InputNumberModule]
+    InputNumberModule,
+  ],
 })
-export class PrimengModule { }
+export class PrimengModule {}

@@ -1,71 +1,320 @@
+<br />
+<div class="profileComponent">
+  <div>
+    <div
+      class="flex"
+      style="padding: 20px 20px 10px 40px; border-bottom: 1px solid #dbd5d5"
+    >
+      <div class="col-3 profilePictureContainer" style="text-align: center">
+        <!-- (click)="pp.toggle($event)" -->
+        <img
+          style="border-radius: 50%; cursor: pointer"
+          width="120px"
+          height="120px"
+          [src]="
+            userData.profilePic
+              ? userData.profilePic
+              : '../../../assets/default.png'
+          "
+        />
 
+        <!-- <div class="profileOverlay">
+          <p-overlayPanel
+            #pp
+            [dismissable]="true"
+            styleClass="profilePictureOverlay"
+          >
+            <ng-template pTemplate>
+              <span>
+                <input
+                  accept="image/png , image/jpeg"
+                  id="file-profile-picture"
+                  type="file"
+                  (change)="profilePictureUpload($event)"
+                  style="display: none"
+                />
+                <label
+                  for="file-profile-picture"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    font-size: 18px;
+                    font-family: poppins;
+                    color: black;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                  "
+                >
+                  <i
+                    class="pi pi-image"
+                    style="font-size: 21px; padding-right: 7px"
+                  ></i>
+                  New profile picture
+                </label>
+              </span>
 
-<div class="profileContainer">
-  <div class="coverPhotoPart">
-    <img [src]="userData.coverPic" alt="">
+              <span
+                style="
+                  font-size: 18px;
+                  font-family: poppins;
+                  color: rgb(255, 0, 0);
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                "
+                (click)="removeProfilePicture()"
+                [ngClass]="
+                  userData.profilePic === null ? 'nullProfilePicture' : ''
+                "
+              >
+                <i
+                  class="pi pi-trash"
+                  style="font-size: 21px; padding-right: 7px"
+                ></i>
+                Remove current picture
+              </span>
+            </ng-template>
+          </p-overlayPanel>
+        </div> -->
+        <span>
+          {{ userData.firstName | titlecase }}
+          {{ userData.lastName | titlecase }}</span
+        >
+        <!-- <br /> -->
+        <!-- <p
+          style="
+            font-size: 23px;
+            font-family: emoji;
+            letter-spacing: 1px;
+            padding-bottom: 0px;
+            margin: 0px;
+          "
+        >
+          {{ userData.userName }}
+        </p> -->
+      </div>
+
+      <div class="col-9 pt-5" style="text-align: center">
+        <p
+          style="
+            font-size: 23px;
+            font-family: emoji;
+            letter-spacing: 1px;
+            padding-bottom: 0px;
+            margin: 0px;
+          "
+        >
+          {{ userData.userName }}
+        </p>
+        <span>
+          {{ userData.bio }}
+        </span>
+        <br />
+        <p>
+          {{ userData.link }}
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex col-12"
+      style="padding: 0px 20px 0px 40px; text-align: center"
+    >
+      <!-- <div class="col-3">
+        <span>
+          {{ userData.firstName | titlecase }}
+          {{ userData.lastName | titlecase }}</span
+        >
+      </div> -->
+      <div
+        class="col-12"
+        style="
+          display: flex;
+          justify-content: space-evenly;
+          align-items: end;
+          text-align: center;
+          padding-top: 0px;
+        "
+      >
+        <div class="col-3">
+          <span>{{ userData.postCOUNT }} posts</span>
+        </div>
+        <div class="col-3">
+          <span>{{ userData.followerCount }} Followers</span> <br />
+          <!-- <span></span> -->
+        </div>
+        <div class="col-3">
+          <span>{{ userData.followingCount }} Following</span> <br />
+          <!-- <span></span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="postHeading">POSTS</h2>
+  <div>
+    <div *ngFor="let item of postsData">
+      <div class="card">
+        <div class="flex bd-highlight">
+          <div class="p-2 pt-0 bd-highlight">
+            <img
+              class="profile-img"
+              [src]="
+                userData.profilePic != null
+                  ? userData.profilePic
+                  : '../../../assets/default.png'
+              "
+            />
+          </div>
+          <div class="p-2 bd-highlight">
+            <p class="name">
+              {{ userData.firstName | titlecase }}
+              {{ userData.lastName | titlecase
+              }}<span *ngIf="item.sharedPost == true">shared this post</span>
+            </p>
+            <p class="time">
+              {{ item.time | time }}
+            </p>
+          </div>
+          <div class="ml-auto p-2 bd-highlight">
+            <!-- (click)="op.toggle($event)" -->
+            <button class="profile-view">
+              <i style="cursor: pointer" class="pi pi-ellipsis-h"></i>
+            </button>
+            <!-- <p-overlayPanel #op [dismissable]="true">
+              <ng-template pTemplate>
+                <span
+                  (click)="deletePost(item.postId)"
+                  class="deletePost cursor"
+                  style="
+                    color: red;
+                    font-size: 18px;
+                    font-family: Poppins;
+                    cursor: pointer;
+                  "
+                >
+                  Delete Post
+                </span>
+              </ng-template>
+            </p-overlayPanel> -->
+          </div>
+        </div>
+
+        <div>
+          <p style="white-space: pre-wrap" class="caption">{{ item.post }}</p>
+        </div>
+
+        <div class="like-comment flex justify-content-between">
+          <div>
+            <span>{{ item.likeCount }} likes</span>
+          </div>
+          <div>
+            <span (click)="getComments(item.postId)" style="cursor: pointer"
+              >{{ item.commentCount }} comments</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="flex justify-content-around"
+          style="
+            border: 3px solid rgb(206 195 195);
+            border-width: 1px 0px 0px 0px;
+            padding-top: 11px;
+            margin: 5px;
+            margin-bottom: 0px;
+          "
+        >
+          <div (click)="likePost(item.postId)" style="cursor: pointer">
+            <i
+              [ngClass]="item.like == true ? 'likeIcon' : ''"
+              class="pi pi-heart"
+            ></i>
+          </div>
+          <div
+            style="cursor: pointer; display: flex; align-items: center"
+            (click)="getComments(item.postId)"
+          >
+            <i style="cursor: pointer" class="pi pi-comments"></i>
+          </div>
+          <div style="display: flex; align-items: center">
+            <i style="cursor: pointer" class="pi pi-share-alt"></i>
+          </div>
+        </div>
+
+        <div
+          [formGroup]="commentGroup"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+          "
+        >
+          <input
+            type="text"
+            pInputText
+            class="for-text"
+            formControlName="comment"
+            placeholder="Write a comment..."
+            (keydown.enter)="userPostComment(item.postId)"
+            maxlength="30"
+          />
+          &nbsp; &nbsp;
+          <i
+            (click)="userPostComment(item.postId)"
+            style="font-size: 21px; cursor: pointer"
+            class="pi pi-send"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <div
+          *ngIf="commentId == item.postId && displayComments"
+          style="padding-left: 40px; margin-top: 16px"
+        >
+          <div *ngFor="let item of commentData" class="flex bd-highlight">
+            <div class="p-2 bd-highlight">
+              <img
+                class="profile-img"
+                style="width: 50px; height: 50px; border-radius: 40px"
+                [src]="
+                  item.profilePic != 'null'
+                    ? item.profilePic
+                    : '../../../assets/default.png'
+                "
+              />
+            </div>
+            <div class="p-2 bd-highlight">
+              <p class="commentName">
+                {{ item.firstName }} {{ item.lastName }}
+                <span class="commentTime">{{
+                  item.commentsList.time | time
+                }}</span>
+              </p>
+
+              <p class="comment">
+                {{ item.commentsList.comment }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="commentData.length == 0 && commentId == item.postId">
+          <p
+            style="
+              text-align: center;
+              margin-bottom: 0px;
+              margin-top: 0px;
+              color: #333;
+            "
+          >
+            <b> No Comments To Display</b>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="flex" style="width: 100%;border-bottom: 1px solid #d0caca;">
-    <div class="col-3">
-    
-    </div>
-    <div class="postsAndFolowersPart col-9">
-      <div class="postsSubContainer">
-        <div class=" folowingPart">
-          <h4>Posts</h4>
-          <h5>{{userData.posts}}</h5>
-        </div>
-        <div class="folowingPart">
-          <h4>Folowers</h4>
-          <h5>{{userData.followers}}</h5>
-        </div>
-        <div class="folowingPart">
-          <h4>Following</h4>
-          <h5>{{userData.following}}</h5>
-        </div>
-
-      </div>
-
-    </div>
+  <div *ngIf="postsData.length == 0">
+    <br /><br /><br />
+    <h2 style="text-align: center">NO POSTS TO DISPLAY</h2>
   </div>
-
-  <div class="userInfoPart">
-    <div class="InfoPart col-4">
-      <div class="appLogoInfo">
-        <div class="mainLogo">
-          <h2>Logistc space</h2>
-          <i class="pi pi-verified"></i>
-        </div>
-        <h3>@logisticspace</h3>
-      </div>
-      <div class="locationPart">
-        <i class="pi pi-map-marker"></i>
-        <h2>{{userData.location}}</h2>
-      </div>
-      <div class="blogPart">
-        <i class="pi pi-link"></i>
-        <h2>{{userData.link}}</h2>
-      </div>
-      <div class="joinedDatePart">
-        <i class="pi pi-clock"></i>
-        <h2>{{userData.createdby}}</h2>
-      </div>
-
-    </div>
-    <div class="postsPart col-8">
-      <h3>All posts</h3>
-    </div>
-
-
-  </div>
-
+  <br /><br />
 </div>
-<p-button label="Primary"></p-button>
-<p-button label="Secondary" styleClass="p-button-secondary"></p-button>
-<p-button label="Success" styleClass="p-button-success"></p-button>
-<p-button label="Info" styleClass="p-button-info"></p-button>
-<p-button label="Warning" styleClass="p-button-warning"></p-button>
-<p-button label="Help" styleClass="p-button-help"></p-button>
-<p-button label="Danger" styleClass="p-button-danger"></p-button>
-
-
