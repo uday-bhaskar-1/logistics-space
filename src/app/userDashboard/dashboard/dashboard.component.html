@@ -9,9 +9,10 @@
   </div>
   <div class="col-6 mt-0 pt-0">
     <div style="width: 97%; margin-left: 9px" class="header">
-      <h2>Home</h2>
+      <h2>{{this.componentHeaderName}}</h2>
     </div>
-    <router-outlet></router-outlet>
+    
+    <router-outlet (activate)="fetchComponentHeaderName()"></router-outlet>
   </div>
   <div class="col-3">
     <div style="position: fixed; min-width: 24%">
