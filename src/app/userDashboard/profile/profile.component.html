@@ -1,15 +1,14 @@
 <div class="profileComponent">
   <div>
     <div
-      class="flex"
-      style="padding: 20px 20px 10px 40px; border-bottom: 1px solid #dbd5d5"
+      class="flex profile-layout"
+      
     >
-      <div class="col-3 profilePictureContainer" style="text-align: center">
+      <div class="col-3 profilePictureContainer" >
         <!-- (click)="pp.toggle($event)" -->
         <img
-          style="border-radius: 50%; cursor: pointer"
-          width="120px"
-          height="120px"
+         class="prifilePicture"
+          
           [src]="
             userData.profilePic
               ? userData.profilePic
@@ -92,16 +91,8 @@
         </p> -->
       </div>
 
-      <div class="col-9 pt-5" style="text-align: center">
-        <p
-          style="
-            font-size: 23px;
-            font-family: emoji;
-            letter-spacing: 1px;
-            padding-bottom: 0px;
-            margin: 0px;
-          "
-        >
+      <div class="col-9 pt-5 userProfileNameDiv">
+        <p class="userProfileName">
           {{ userData.userName }}
         </p>
         <span>
@@ -124,8 +115,8 @@
         >
       </div> -->
       <div
-        class="col-12 pt-3"
-        style="display: flex; justify-content: space-evenly; text-align: center"
+        class="col-12 pt-3 routerComponentDiv"
+       
       >
         <div class="col-3">
           <span class="routerComponent">{{ userData.postCOUNT }} posts</span>
