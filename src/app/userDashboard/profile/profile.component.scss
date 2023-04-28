@@ -1,8 +1,37 @@
 .profileComponent {
+
+    .profile-layout{
+        padding: 20px 20px 10px 40px;
+        border-bottom: 1px solid #dbd5d5;
+        margin-left: 9px;
+        margin-right: 13px;
+    }
+    .profilePictureContainer{
+        text-align: center
+    }
+    .prifilePicture{
+        border-radius: 50%;
+        cursor: pointer;
+        width:120px;
+        height:120px;
+    }
     .userNameSpan{
         font-weight: bold;
-            font-size: 18px;
+        font-size: 18px;
     }
+    .userProfileNameDiv{
+        text-align: center
+    }
+    .userProfileName{
+        
+        font-size: 23px;
+        font-family: emoji;
+        letter-spacing: 1px;
+        padding-bottom: 0px;
+        margin: 0px;
+      
+    }
+
     .p-inputtext {
             font-size: 10px;
             color: black;
@@ -18,7 +47,10 @@
         color: #333;
         font-size: 16px;
         max-width: 100%;
-        margin:  10px 0px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 10px;
+        margin-right: 13px;
             border: 0.6px solid #d6cdcd;
     }
 
@@ -60,7 +92,11 @@
         margin-top: 0px;
         margin-bottom: 15px;
     }
-
+.routerComponentDiv{
+    display: flex; 
+    justify-content: space-around;
+    text-align: center
+}
   
 .routerComponent{
 font-size: 22px;
