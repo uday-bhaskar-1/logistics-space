@@ -9,7 +9,7 @@
   </div>
   <div class="col-6 mt-0 pt-0">
     <div style="width: 97%; margin-left: 9px" class="header">
-      <h2>{{this.componentHeaderName}}</h2>
+      <h2>{{this.componentHeaderName | titlecase}}</h2>
     </div>
     
     <router-outlet (activate)="fetchComponentHeaderName()"></router-outlet>

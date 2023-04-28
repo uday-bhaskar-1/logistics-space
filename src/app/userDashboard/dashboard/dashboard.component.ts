@@ -18,7 +18,6 @@ export class DashboardComponent {
   fetchComponentHeaderName(){
     let pageUrl = this.router.url;
     this.componentHeaderName = pageUrl.split('/').splice(-1, 1)[0];
-    this.componentHeaderName = this.componentHeaderName.charAt(0).toUpperCase() + this.componentHeaderName.slice(1)
     
   }
 
