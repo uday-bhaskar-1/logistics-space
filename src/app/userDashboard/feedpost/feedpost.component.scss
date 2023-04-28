@@ -222,3 +222,34 @@ section{
                  box-shadow: none !important;
              }
          }
+.uploadedImages{
+    height: 45px;
+    max-width: 60px;
+    border-radius: 2px;
+}
+
+.uploadImageRemove{
+ color: red;
+position: absolute;
+right: 30%;
+border-radius: 50%;
+padding: 3px;
+cursor: pointer;
+top: 33%;
+border: 1px solid white;
+font-size: 11px;
+// visibility: hidden;
+}
+.uploadedImages:hover .uploadImageRemove {
+    // background-color: rgb(78, 76, 76);
+    visibility: hidden;
+}
+
+.uploadDefaultImage{
+    display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-family: poppins;
+        color: black;
+        cursor: pointer;
+}
