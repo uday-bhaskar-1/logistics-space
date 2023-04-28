@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+
+  componentHeaderName;
+
+  constructor(private router:Router){  }
+
+  
+
+
+  fetchComponentHeaderName(){
+    let pageUrl = this.router.url;
+    this.componentHeaderName = pageUrl.split('/').splice(-1, 1)[0];
+    
+  }
+
 
 }
