@@ -12,8 +12,9 @@ export class DashboardComponent {
 
   constructor(private router:Router){  }
 
-  
-
+  ngOnInit(){
+    this.fetchComponentHeaderName()
+  }
 
   fetchComponentHeaderName(){
     let pageUrl = this.router.url;
